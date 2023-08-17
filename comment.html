@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add new comment</title>
+  </head>
+
+  <body>
+    <h1>Please add your comments</h1>
+    <div class="comment-container">
+      <p>
+        Dolor quisquam repudiandae distinctio totam dicta molestiae quidem amet?
+        Enim cupiditate possimus qui hic a doloribus Obcaecati debitis accusamus
+        fugit soluta rem, in, aut dolorum Cum ea dicta ea vitae.
+      </p>
+
+      <p>
+        Consectetur libero accusamus dignissimos saepe incidunt Quasi odit quasi
+        explicabo molestiae saepe Quibusdam ipsum illo accusantium ea nisi
+        Minima aliquam architecto autem nam voluptates! Eum explicabo quasi
+        dolores aspernatur nesciunt?
+      </p>
+
+      <p>
+        Adipisicing voluptas consequatur sequi ex aliquid Ipsam in voluptates
+        temporibus alias voluptatibus, rerum corporis? Saepe nam voluptates
+        molestiae harum neque! Eos ratione ut ducimus quidem placeat Dolores
+        iusto doloribus impedit?
+      </p>
+    </div>
+
+    <div>
+      <textarea id="new-comment" rows="10" cols="30"></textarea>
+      <br />
+      <button id="btn-post" type="text">Post</button>
+    </div>
+
+    <script>
+      document
+        .getElementById("btn-post")
+        .addEventListener("click", function () {
+          const commentBox = document.getElementById("new-comment");
+          const commentMsg = commentBox.value;
+
+          const commentContainer = document.getElementById("comment-container");
+
+          const p = document.createElement("p");
+          p.innerText = commentMsg;
+          commentContainer.appendChild(p);
+
+          commentBox.value = "";
+        });
+    </script>
+  </body>
+</html>
