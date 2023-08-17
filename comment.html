@@ -7,7 +7,7 @@
 
   <body>
     <h1>Please add your comments</h1>
-    <div class="comment-container">
+    <div id="comment-container">
       <p>
         Dolor quisquam repudiandae distinctio totam dicta molestiae quidem amet?
         Enim cupiditate possimus qui hic a doloribus Obcaecati debitis accusamus
@@ -42,10 +42,10 @@
           const commentBox = document.getElementById("new-comment");
           const commentMsg = commentBox.value;
 
-          const commentContainer = document.getElementById("comment-container");
-
           const p = document.createElement("p");
           p.innerText = commentMsg;
+
+          const commentContainer = document.getElementById("comment-container");
           commentContainer.appendChild(p);
 
           commentBox.value = "";
